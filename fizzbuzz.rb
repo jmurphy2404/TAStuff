@@ -9,5 +9,17 @@ elsif (num % 3 == 0)
 elsif (num % 5 == 0)
 	puts "buzz"
 else
-	puts "not possible"
+	puts "#{num} is not fizzbuzzable"
 end
+
+# for num in 1..100
+# 	if ((num % 5 == 0) && (num % 3 == 0))
+# 		puts "fizzbuzz"
+# 	elsif (num % 3 == 0)
+# 		puts "fizz"
+# 	elsif (num % 5 == 0)
+# 		puts "buzz"
+# 	else
+# 		puts "#{num} is not fizzbuzzable"
+# 	end
+# end
