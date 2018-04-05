@@ -14,11 +14,11 @@ end
 
 # for num in 1..100
 # 	if ((num % 5 == 0) && (num % 3 == 0))
-# 		puts "fizzbuzz"
+# 		puts "#{num} is a fizzbuzz"
 # 	elsif (num % 3 == 0)
-# 		puts "fizz"
+# 		puts "#{num} is a fizz"
 # 	elsif (num % 5 == 0)
-# 		puts "buzz"
+# 		puts "#{num} is a buzz"
 # 	else
 # 		puts "#{num} is not fizzbuzzable"
 # 	end
