@@ -15,5 +15,3 @@ class Reptile
 		end
 	end
 end
-
-
