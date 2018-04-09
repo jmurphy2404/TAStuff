@@ -30,7 +30,7 @@ class Stack
     @size
   end
   
-  def look
+  def peek
     @store[@top]
   end
   
