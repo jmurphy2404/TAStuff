@@ -3,3 +3,12 @@
 <% for i in 0..9 do %>
 	<%= i %>
 <% end %>
+
+
+<form method="post" action="/postroute">
+	Joke Type: <input type="text" name="joketype" value="nerdy">
+<input type="submit" value="Submit">
+
+<% if !joke.nil? %>
+	<%= joke %>
+<% end %>
