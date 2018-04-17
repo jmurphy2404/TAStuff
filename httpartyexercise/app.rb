@@ -1,5 +1,4 @@
 require 'httparty'
-require 'json'
 
 class Magician
 	# def initialize(cities, countries)
@@ -632,19 +631,19 @@ class Magician
 		"Balakovo",
 		"Balashikha",
 		"Baleshwar",
-		"Balıkesir",
+		"Balikesir",
 		"Balikpapan",
 		"Baliuag",
 		"ballarat",
 		"Bally",
-		"Balți",
+		"Balti",
 		"Baltimore",
 		"Balurghat",
 		"Bamako",
 		"Bamenda",
 		"Banda_Aceh",
 		"Bandar_Abbas",
-		"Bandırma",
+		"Bandirma",
 		"Bandung",
 		"Bangalore",
 		"Bangkok",
@@ -704,7 +703,7 @@ class Magician
 		"Bauru",
 		"Bayambang",
 		"Bayamo",
-		"Bayamón",
+		"Bayamon",
 		"Bayannur",
 		"Bayawan",
 		"Baybay",
@@ -751,7 +750,7 @@ class Magician
 		"Berkeley",
 		"Berlin",
 		"Bern",
-		"Besançon",
+		"Besancon",
 		"Betim",
 		"Bettiah",
 		"Bhadravati",
@@ -775,7 +774,7 @@ class Magician
 		"Bialystok",
 		"Bidar",
 		"Bielefeld",
-		"Bielsko-Biała",
+		"Bielsko-Biala",
 		"Bihar_Sharif",
 		"Bijapur",
 		"Bikaner",
@@ -841,7 +840,7 @@ class Magician
 		"Bozhou",
 		"Bradford",
 		"Braga",
-		"Bragança_Paulista",
+		"Braganca_Paulista",
 		"Braila",
 		"Brampton",
 		"Brasilia",
@@ -1200,9 +1199,21 @@ class Magician
 			temp1 = @cities[i]
 			temp2 = @countries[i]
 	    	response = HTTParty.get("http://api.wunderground.com/api/023b537b0ab0fdea/geolookup/q/#{temp2}/#{temp1}.json");
-	    	@this_city = JSON.parse(response.body)["location"]["city"]
-	    	@this_country = JSON.parse(response.body)["location"]["country_name"]
-	    	@this_magic = JSON.parse(response.body)["location"]["magic"]
+	    	if response["location"]
+	    		@this_city = JSON.parse(response.body)["location"]["city"]
+	    	else
+	    		puts "no data"
+	    	end
+	    	if response["location"]
+	    		@this_country = JSON.parse(response.body)["location"]["country_name"]
+	    	else
+	    		puts "no data"
+	    	end
+	    	if response["location"]
+	    		@this_magic = JSON.parse(response.body)["location"]["magic"]
+	    	else
+	    		puts "no data"
+	    	end
 	    	puts "#{@this_city}, #{@this_country} is this magic: #{@this_magic}."
 		end
 	end
