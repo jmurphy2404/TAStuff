@@ -1196,25 +1196,16 @@ class Magician
 		"Poland",
 		"Nepal"]
 		for i in 0..296
-			temp1 = @cities[i]
-			temp2 = @countries[i]
-	    	response = HTTParty.get("http://api.wunderground.com/api/023b537b0ab0fdea/geolookup/q/#{temp2}/#{temp1}.json");
+	    	response = HTTParty.get("http://api.wunderground.com/api/023b537b0ab0fdea/geolookup/q/#{@countries[i]}/#{@cities[i]}.json")
+	    	reader = JSON.parse(response.body)
 	    	if response["location"]
-	    		@this_city = JSON.parse(response.body)["location"]["city"]
+	    		this_city = reader["location"]["city"]
+	    		this_country = reader["location"]["country_name"]
+	    		this_magic = reader["location"]["magic"]
 	    	else
 	    		puts "no data"
 	    	end
-	    	if response["location"]
-	    		@this_country = JSON.parse(response.body)["location"]["country_name"]
-	    	else
-	    		puts "no data"
-	    	end
-	    	if response["location"]
-	    		@this_magic = JSON.parse(response.body)["location"]["magic"]
-	    	else
-	    		puts "no data"
-	    	end
-	    	puts "#{@this_city}, #{@this_country} is this magic: #{@this_magic}."
+	    	puts "#{this_city}, #{this_country} is this magic: #{this_magic}."
 		end
 	end
 end
