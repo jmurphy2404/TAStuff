@@ -1,15 +1,3 @@
-require 'httparty'
-require_relative 'locations'
-
-
-
-def magic
-
-    response = HTTParty.get('http://api.wunderground.com/api/023b537b0ab0fdea/geolookup/q/France/Paris.json');
-    @bodyresponse = JSON.parse(response.body)["message"]
-    puts @bodyresponse
-end
-
 cities = ["Bab Ezzouar",
 "Babol",
 "Babruysk",
