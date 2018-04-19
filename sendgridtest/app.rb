@@ -30,10 +30,10 @@ post '/' do
 	}')
 end
 
-sg = SendGrid::API.new(api_key: API)
-response = sg.client.mail._("send").post(request_body: @data)
+# sg = SendGrid::API.new(api_key: API)
+# response = sg.client.mail._("send").post(request_body: @data)
 
-puts response.status_code
-puts response.body
-puts response.parsed_body
-puts response.headers
+# puts response.status_code
+# puts response.body
+# puts response.parsed_body
+# puts response.headers
