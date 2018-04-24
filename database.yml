@@ -1,6 +1,8 @@
-# development:
-#   adapter: postgresql
-#   database: development
-#   username: <%= ENV['PG_USER'] %>
-#   password: <%= ENV['PG_PASS'] %>
-# host: localhost
+#sample database.yml for a development db in a project using postgresql
+
+development:
+  adapter: postgresql
+  database: development
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+host: localhost
