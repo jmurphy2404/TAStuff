@@ -1,8 +1,9 @@
-<% if 1 == 1 %>
+get '/users/all' do
+	@allusers = User.all
+	erb :all
+end
 
-	<%= @admin.id %>
-<% end %>
-
-<% loop statement %>
-<a href='/<%= @user.id %>/posts'><%= @user.name %>'s posts</a>
-<% end %>
+get '/user/:id' do
+	@specific_user = User.find(params[:id])
+	erb :show
+end
