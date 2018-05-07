@@ -5,5 +5,5 @@ end
 
 get '/user/:id' do
 	@specific_user = User.find(params[:id])
-	erb :show
+	erb ":/views/show/edit"
 end
