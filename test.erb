@@ -16,3 +16,5 @@
 	<input name="age" value="<%= @student.age %>"></input>
 
 	<%= link_to new_student_path(@student), remote: true %>
+
+	<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
