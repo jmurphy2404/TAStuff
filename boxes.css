@@ -1,8 +1,13 @@
 .container {
-
+	height: 700px;
+	width: 1000px;
+	border: 1px solid black;
 }
 
 .box {
+	height: 150px;
+	width: 150px;
+	border: 1px solid black;
 
 }
 
@@ -11,7 +16,7 @@
 }
 
 #two {
-
+	margin-left: 150px;
 }
 
 #three {
@@ -19,5 +24,53 @@
 }
 
 #four {
+	margin-left: 150px;
+}
+
+#Bone {
+
+}
+
+#Btwo {
+
+}
+
+#Bthree {
+
+}
+
+#Bfour {
+
+}
+
+#Cone {
+
+}
+
+#Ctwo {
+
+}
+
+#Cthree {
+
+}
+
+#Cfour {
+
+}
+
+#Done {
+
+}
+
+#Dtwo {
+
+}
+
+#Dthree {
+
+}
+
+#Dfour {
 
 }
