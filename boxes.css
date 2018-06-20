@@ -2,6 +2,7 @@
 	height: 700px;
 	width: 1000px;
 	border: 1px solid black;
+	margin: 10px;
 }
 
 .box {
@@ -16,7 +17,7 @@
 }
 
 #two {
-	margin-left: 150px;
+	margin-left: 151px;
 }
 
 #three {
@@ -24,7 +25,7 @@
 }
 
 #four {
-	margin-left: 150px;
+	margin-left: 151px;
 }
 
 #Bone {
