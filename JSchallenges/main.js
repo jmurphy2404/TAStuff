@@ -5,3 +5,7 @@ for (i=0; i < prices.length; i++){
 	sum += prices[i];
 	console.log("The sum is: ", sum);
 }
+
+for (i=0; i<=99; i++){
+  console.log(`${i} beers`)
+}
