@@ -11,3 +11,6 @@ let movieCalc = (movies, airtime) => {
 }
 
 movieCalc(arr, 215);
+
+
+// can also use j = i + 1 instead of j = 1 and using movies.length - 1 in the i loop
