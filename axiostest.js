@@ -8,4 +8,13 @@
 
 axios.get('https://api.myjson.com/bins/bygvt').then((response) => {
 	console.log(response);
+	let aliases = response.data.aliases;
+	for(i=0; i < aliases.length; i++) {
+		console.log(aliases[i]);
+	};
+	const text = document.createTextNode(response.data.playedBy.actor);
+	let newEl = document.createElement("p");
+	newEl.setAttribute("id", "my-actor");
+	newEl.appendChild(text);
+	document.getElementById("target").appendChild(newEl)
 })
