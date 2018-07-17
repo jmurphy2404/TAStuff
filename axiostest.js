@@ -18,3 +18,8 @@ axios.get('https://api.myjson.com/bins/bygvt').then((response) => {
 	newEl.appendChild(text);
 	document.getElementById("target").appendChild(newEl)
 })
+
+let url = response.data.url
+let link = document.
+
+link.setAttribute("href", url)
