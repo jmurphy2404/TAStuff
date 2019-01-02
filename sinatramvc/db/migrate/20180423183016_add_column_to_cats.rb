@@ -4,3 +4,4 @@ class AddColumnToCats < ActiveRecord::Migration[5.2]
   end
 end
 
+#show this as example for adding cats owner id to a table for the FK/PK relatonsjip and what they keywords are
