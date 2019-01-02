@@ -5,6 +5,7 @@ get '/' do
 	erb :index
 end
 
+# note this for discussing in class this week
 
 post '/postroute' do
 	joketype = params[:joketype]
