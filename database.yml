@@ -1,4 +1,5 @@
 #sample database.yml for a development db in a project using postgresql
+#consider making new one or modifying it so it shows Fizal's preferrred action, i.e. dev in sqlite3 but prod in postgresql
 
 development:
 adapter: postgresql
